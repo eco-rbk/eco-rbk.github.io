@@ -1,5 +1,6 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -69,7 +70,15 @@ nav li :hover {
   transform-origin: center right;
   transition: transform 1s;
 }
-
+.card1{
+  box-shadow: 8px 8px 5px lightblue;
+  margin: 15px;
+  max-width: auto;
+   align-items: center;
+   transform-style: preserve-3d;
+transform-origin: center right;
+transition: transform 1s;
+}
 .card-img-top{
   max-width: 50px;
 }
@@ -192,6 +201,19 @@ nav li :hover {
     margin-bottom: 50px;
     
   }
+  .rasbg{
+    /* The image used */
+    background-image : url('../image/raskh.jpg');
+    height: 45%;   
+    background-position:center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 30px;
+    width:fit-content(100%);
+    justify-content:center;
+    margin-bottom: 50px;
+    
+  }
   .classbbg{
     /* The image used */
     background-image : url('../image/class_b.jpg');
@@ -221,6 +243,45 @@ nav li :hover {
   .classgbg{
     /* The image used */
     background-image : url('../image/classg.jpg');
+    height: 45%;   
+    background-position:center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 30px;
+    width:fit-content(100%);
+    justify-content:center;
+    margin-bottom: 50px;
+    
+  }
+  .conbg{
+    /* The image used */
+    background-image : url('../image/bg.jpg');
+    height: 45%;   
+    background-position:center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 30px;
+    width:fit-content(100%);
+    justify-content:center;
+    margin-bottom: 50px;
+    
+  }
+  .dezbg{
+    /* The image used */
+    background-image : url('../image/dezbg.jpg');
+    height: 45%;   
+    background-position:center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 30px;
+    width:fit-content(100%);
+    justify-content:center;
+    margin-bottom: 50px;
+    
+  }
+  .rasbg{
+    /* The image used */
+    background-image : url('../image/rasbg.jpg');
     height: 45%;   
     background-position:center;
     background-repeat: no-repeat;
@@ -404,4 +465,9 @@ nav li :hover {
   color: #bbb;
   text-decoration: none;
   cursor: pointer;
+}
+.float-right{
+  float: right ;
+  max-height:110px;
+  display: block;
 }
