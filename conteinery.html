@@ -95,6 +95,51 @@ crossorigin="anonymous" referrerpolicy="no-referrer" />
 </div>
 </div>
 <div class="vl" style="margin-top: 50px;"></div>
+<div class="container mt-5 mb-5 p-5 bg3" style="background-color: pink;" >
+  <p style="text-align: center;font-size:27px;font-family: mont-serrat;">Заказ расходных материалов</p>
+  <button class="btn" onclick="document.getElementById('id01').style.display='block'" style="width:auto;color: azure;font-family: mont serrat;">Заказать</button>
+  
+  <div id="id01" class="modal">
+    
+    <form class="modal-content animate" action="https://getform.io/f/38481329-c46e-4e89-9f2b-f276b8312228" method="post">
+          
+            <div class="form-group col-md-12">
+              <label for="inputEmail4">ФИО*</label>
+              <input type="text" name="name" class="form-control" id="inputEmail4" placeholder="" required>
+            </div>
+            
+          
+          <div class="form-group col-md-12">
+            <label for="inputAddress">Email*</label>
+            <input type="email" name="email" class="form-control" id="inputAddress" placeholder="" required>
+          </div>
+          <div class="form-group col-md-12">
+            <label for="inputAddress2">Телефон*</label>
+            <input type="text" name="phone" class="form-control" id="inputAddress2" placeholder="" required>
+          </div>
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <label for="inputCity">Название продукта</label>
+              <textarea name="text" class="form-control" id="inputCity"></textarea>
+            </div>
+            <div class="form-group col-md-6">
+              <label for="inputState">Город</label>
+              <select name="city" id="inputState" class="form-control">
+                <option selected>Астана, Акмолинская обл.</option>
+                <option>Алматы</option>
+                <option>Тараз, Жамбылськая обл.</option>
+                <option>Шымкент</option>
+                <option>Актобе, Актюбинская обл.</option>
+              </select>
+            </div>
+            
+          </div>
+          <button class="col-md-2 btn" type="submit">Отправить</button>
+        </form>
+    
+  </div>
+</div>
+<div class="vl"></div>
 <div class="container mt-5 mb-5 p-5 calcbg">
     <p class="mt-auto" style="font-size: 27px;font-family:mont serrat;color: black;text-align: center;">Калькулятор стоимости</p>
     <a href="calc.html" style="text-decoration: none;"><button class="btn" style="width:auto;color: black;font-family: mont serrat;background-color: beige;">Карта тарифов</button></a>
