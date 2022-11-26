@@ -467,7 +467,8 @@ transition: transform 1s;
   cursor: pointer;
 }
 .float-right{
-  float: right ;
+  float: right !important;
   max-height:110px;
   display: block;
+  padding:10px
 }
