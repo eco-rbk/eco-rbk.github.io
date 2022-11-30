@@ -60,38 +60,44 @@ crossorigin="anonymous" referrerpolicy="no-referrer" />
           </ul>
         </div>
          </nav>
-      
-        <div class="bg" style="margin-bottom: 50px;">
-            <div class="container" >
-                 <div class="row">
-                  <div class="col-sm-6 col-lg-6">
+      <div class="container-fluid no-gutters m-0 p-0">
+            <div class="row m-0  bg" >
+                  <div class="col-sm-6 col-lg-6 overlay m-4">
                     <br>
-                    <p id="indmain" style="justify-content: center;font-size: 38px;font-family:mont serrat;color: black;">Утилизация медицинских отходов</p>
-             <br>
-             <br>
-                     <p id="indmain2" class="text" style="font-size:18px;color:black;font-family:mont serrat;">ТОО "Эко-РБК" - компания специализированная на утилизации медицинских отходов. Мы призываем всех вас бережно отнестись к проблемам окружающей среды! Наша компания готова помочь Вам в этом вопросе! </p>
+                    <p id="indmain" style="font-size:30px;font-family:mont serrat;color: black;">Утилизация медицинских, биологических, фармацевтических, пищевых и отходов производства</p>
+       
+                     <p id="indmain2" class="text" style="font-size:17px;color:black;font-family:mont serrat;">ТОО "Эко-РБК" - компания, специализированная на утилизации медицинских, биологических, фармацевтических, пищевых и отходов производства. 
+                     <br> Наша миссия - Улучшать окружающую среду, путем качественного управления опасными отходами, внедряя новые способы утилизации опасных отходов. 
+                      <br>Мы призываем всех бережно отнестись к проблемам окружающей среды! Наша компания готова помочь Вам в этом вопросе!
+                      </p>
                   <br>
-                  <br>
+                  
                   <br>
                   <br>
                   <button id="zayavka" class="btn" onclick="document.getElementById('id01').style.display='block'" style="width:auto;color: azure;font-family: montserrat;font-size: 18px;">Оставить заявку</button>
 
 <div id="id01" class="modal">
 
-<form class="modal-content animate center container-fluid" action="https://getform.io/f/38481329-c46e-4e89-9f2b-f276b8312228" method="post">
   
+<form class="modal-content animate center container-fluid" action="https://getform.io/f/38481329-c46e-4e89-9f2b-f276b8312228" method="post">
+ 
+    <div class="modal-header container-fluid border-0">
+        <span onclick="closeModal('id01')"
+            class="close">&times;
+        </span>
+    </div>
         <div class="form-group col-md-10 col-sm-10">
-          <label for="inputEmail4">ФИО*</label>
+          <label for="inputEmail4">ФИО<span style="color: red;">*</span></label>
           <input type="text" name="name" class="form-control" id="inputName" placeholder="" required>
         </div>
         
       
       <div class="form-group col-sm-10 col-md-10 ">
-        <label for="inputAddress">Email*</label>
+        <label for="inputAddress">Email<span style="color: red;">*</span></label>
         <input type="email" name="email" class="form-control" id="inputEmail" placeholder="" required>
       </div>
       <div class="form-group col-sm-10 col-md-10 ">
-        <label for="inputAddress2">Телефон*</label>
+        <label for="inputAddress2">Телефон<span style="color: red;">*</span></label>
         <input type="text" name="phone" class="form-control" id="inputAddress2" placeholder="" required>
       </div>
       <div class="form-row">
@@ -115,13 +121,10 @@ crossorigin="anonymous" referrerpolicy="no-referrer" />
     </form>
 </div>
 </div>
-                  <div class="col-sm-6 col-lg-6"></div>
-                    
-                </div>
-            </div>
+</div>           
 
         </div>
-        <div class="vl" ></div>
+        <div class="vl" style="margin-top: 50px;"></div>
         
         <section class="mt-2 bg-l">
           <p class="text-center " id="whyus" style="font-size: 40px;font-family:mont serrat;margin-top: 25px;">Почему мы?</p>
@@ -148,7 +151,7 @@ crossorigin="anonymous" referrerpolicy="no-referrer" />
               <img class ="card-img-top" src="public/image/musor5.png">
               <p class="card-text" style="font-family:mont serrat;font-size: 11pt;" id="card1">Утилизация медицинских отходов</p>
              </div>
-             <div class="card__face card__face--back"><br><p style="font-family: montserrat;font-size: 11pt;" id="card1back">Утилизация медицинских отходов классов Б, В, Г</p></div>
+             <div class="card__face card__face--back"><br><p style="font-family: montserrat;font-size: 11pt;" id="card1back">Утилизация медицинских, биологических, фармацевтических, пищевых и отходов производства</p></div>
           </div>
           <div class="card text-center col-sm-12  col-lg-2 col-md-6 d-flex align-items-stretch">
             <div class="card-body card__face card__face--front">
@@ -212,6 +215,12 @@ crossorigin="anonymous" referrerpolicy="no-referrer" />
 </div>
 </div>
 <div class="vl" style="margin-bottom: 50px;"></div>
+<div class="container mt-5 mb-5 p-5 calcbg">
+  <p class="mt-auto" style="font-size: 27px;font-family:mont serrat;color: black;text-align: center;">Калькулятор стоимости</p>
+  <a href="calc.html" style="text-decoration: none;"><button class="btn" style="width:auto;color: black;font-family: mont serrat;background-color: beige;">Карта тарифов</button></a>
+</div>
+
+<div class="vl"></div>
 <div class="bg2">
 <p style="text-align: center;font-size:30px;font-family: mont-serrat;" id="medutil">Медутилизация - залог здоровья нации</p>
 <p style="text-align: center;font-size:20px;font-family: mont-serrat;" id="believe">Доверьтесь профессионалам!</p>
@@ -220,19 +229,23 @@ crossorigin="anonymous" referrerpolicy="no-referrer" />
 <div id="id01" class="modal">
   
   <form action="https://getform.io/f/38481329-c46e-4e89-9f2b-f276b8312228" method="post">
-    
+    <div class="modal-header container-fluid border-0">
+      <span onclick="closeModal('id01')"
+          class="close">&times;
+      </span>
+  </div>
           <div class="form-group col-md-12">
-            <label for="inputEmail4">ФИО*</label>
+            <label for="inputEmail4">ФИО<span style="color: red;">*</span></label>
             <input type="text" name="name" class="form-control" id="inputEmail4" placeholder="" required>
           </div>
           
         
         <div class="form-group col-md-12">
-          <label for="inputAddress">Email*</label>
+          <label for="inputAddress">Email<span style="color: red;">*</span></label>
           <input type="email"name="email" class="form-control" id="inputAddress" placeholder="" required>
         </div>
         <div class="form-group col-md-12">
-          <label for="inputAddress2">Телефон*</label>
+          <label for="inputAddress2">Телефон<span style="color: red;">*</span></label>
           <input type="text" name="phone" class="form-control" id="inputAddress2" placeholder="" required>
         </div>
         <div class="form-row">
@@ -257,23 +270,25 @@ crossorigin="anonymous" referrerpolicy="no-referrer" />
   
 </div>
 </div>
+<div class="vl"></div>
 
-<div class="vl" style="margin-top: 50px;" ></div>
         <footer class="bg-light text-center text-lg-start" style="margin-top: 50px;">
           <div class="container p-3">
             <div class="row center">
               <div class="col-sm-4 col-lg-4">
                 <p style="font-size: 17px;font-family:mont serrat;">ТОО "ЭКО-РБК"</p>
-        
+                <p style=" text-decoration: none; font-family:mont serrat;font-size: 17px;" > <i class="fa fa-envelope"></i> eco-rbk@mail.ru</p>
                 <a href="index.html"><img style = "width: 130px;" src="public/image/eco-rbkk.png">
              </a> </div>
               <div class="col-sm-4 col-lg-4">
-        
-   
-                <p style=" text-decoration: none; font-family:mont serrat;font-size: 17px;" ><i class="fa fa-phone"></i> 8 (705) 545 65 30
+                <p style=" text-decoration: none; font-family:mont serrat;font-size: 15px;" ><i class="fa fa-phone"></i> Астана: +7 7172 45 6130, +7 707 545 6130
                 </p>
-                <p style=" text-decoration: none; font-family:mont serrat;font-size: 17px;" ><i class="fa fa-phone"></i> 8 (708) 176 00 35</p>
-                <p style=" text-decoration: none; font-family:mont serrat;font-size: 17px;" > <i class="fa fa-envelope"></i> eco-rbk@mail.ru</p>
+                <p style=" text-decoration: none; font-family:mont serrat;font-size: 15px;" ><i class="fa fa-phone"></i>Тараз: +7 7262 42 6919, +7 747 773 5969</p>
+   
+                <p style=" text-decoration: none; font-family:mont serrat;font-size: 15px;" ><i class="fa fa-phone"></i> Шымкент: +7 747 915 6316
+                </p>
+                <p style=" text-decoration: none; font-family:mont serrat;font-size: 15px;" ><i class="fa fa-phone"></i>Алматы: +7 747 790 9360, +7 707 260 9648</p>
+                
               </div>
               <div class="col-sm-4 col-lg-4 ">
                 
