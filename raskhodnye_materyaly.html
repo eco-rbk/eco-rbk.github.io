@@ -13,7 +13,7 @@ crossorigin="anonymous" referrerpolicy="no-referrer" />
    
     <link rel="icon" type="image/x-icon" href="public/image/eco-rbkk.png">
     <link rel="stylesheet" href="public/css/style.css">
-    <title>Вывоз и утилизация медицинских отходов класса Г</title>
+    <title>Продажа расходных материалов</title>
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #fefefe">
@@ -54,9 +54,11 @@ crossorigin="anonymous" referrerpolicy="no-referrer" />
          
         </div>
       </nav>
-        <div class="rasbg">
+      <div class="container-fluid">
+        <div class="row rasbg">
             <p class="mt-auto" style="font-size: 40px;font-family:mont serrat;color: black;text-align: center;">Продажа расходных материалов</p>
-        </div>
+        </div></div>
+       
         <div class="vl"></div>
         <div class="container mt-5 mb-5">
         <p class="text-center " id="whyus" style="font-size: 40px;font-family:mont serrat;margin-top: 23px;">Наш ассортимент</p>
@@ -101,8 +103,9 @@ crossorigin="anonymous" referrerpolicy="no-referrer" />
 <div class="vl">
 
 </div>
-<div class="container mt-5 mb-5 p-5 bg3" style="background-color: pink;" >
-  <p style="text-align: center;font-size:27px;font-family: mont-serrat;">Заказ расходных материалов</p>
+<div class="container" >
+  <div class="row bg3">
+  <p class="col-12" style="text-align: center;font-size:27px;font-family: mont-serrat;">Заказ расходных материалов</p>
   <button class="btn" onclick="document.getElementById('id01').style.display='block'" style="width:auto;color: azure;font-family: mont serrat;">Заказать</button>
   
   <div id="id01" class="modal">
@@ -146,14 +149,16 @@ crossorigin="anonymous" referrerpolicy="no-referrer" />
           </div>
           <button class="col-md-2 btn" type="submit">Отправить</button>
         </form>
-    
+      </div>
   </div>
 </div>
 <div class="vl"></div>
-<div class="container mt-5 mb-5 p-5 calcbg">
-    <p class="mt-auto" style="font-size: 27px;font-family:mont serrat;color: black;text-align: center;">Калькулятор стоимости</p>
-    <a href="calc.html" style="text-decoration: none;"><button class="btn" style="width:auto;color: black;font-family: mont serrat;background-color: beige;">Карта тарифов</button></a>
-  </div>
+<div class="container">
+  <div class="row calcbg">
+  <p class="mt-auto col-12" style="font-size: 27px;font-family:mont serrat;color: black;text-align: center;">Калькулятор стоимости</p>
+  <a class="col-12" href="calc.html" style="text-decoration: none;"><button class="btn" style="width:auto;color: black;font-family: mont serrat;background-color: beige;">Карта тарифов</button></a>
+</div>
+</div>
   <div class="vl"></div>
       
   <footer class="bg-light text-center text-lg-start" style="margin-top: 50px;">
