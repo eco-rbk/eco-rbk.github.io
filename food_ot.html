@@ -89,44 +89,44 @@ crossorigin="anonymous" referrerpolicy="no-referrer" />
         
         <div id="id01" class="modal">
           
-          <form class="modal-content animate" action="https://getform.io/f/38481329-c46e-4e89-9f2b-f276b8312228" method="post">
+          <form class="moda-animate content center container-fluid">
             <div class="modal-header container-fluid border-0">
               <span onclick="closeModal('id01')"
                   class="close">&times;
               </span>
-          </div>       
-            <div class="form-group col-md-12">
+          </div>
+                  <div class="form-group col-md-12">
                     <label for="inputEmail4">ФИО<span style="color: red;">*</span></label>
-                    <input type="text" name="name" class="form-control" id="inputEmail4" placeholder="" required>
+                    <input type="text" class="form-control" id="name" value="" placeholder="" required>
                   </div>
                   
                 
                 <div class="form-group col-md-12">
                   <label for="inputAddress">Email<span style="color: red;">*</span></label>
-                  <input type="email" name="email" class="form-control" id="inputAddress" placeholder="" required>
+                  <input type="email" class="form-control" id="email" placeholder="" value="" required>
                 </div>
                 <div class="form-group col-md-12">
                   <label for="inputAddress2">Телефон<span style="color: red;">*</span></label>
-                  <input type="text" name="phone" class="form-control" id="inputAddress2" placeholder="" required>
+                  <input type="text" class="form-control" id="phone" placeholder="" value="" required>
                 </div>
                 <div class="form-row">
                   <div class="form-group col-md-6">
                     <label for="inputCity">Текст сообщения</label>
-                    <textarea name="text" class="form-control" id="inputCity"></textarea>
+                    <textarea class="form-control" id="text" value=""></textarea>
                   </div>
                   <div class="form-group col-md-6">
                     <label for="inputState">Город</label>
-                    <select name="city" id="inputState" class="form-control">
-                      <option selected>Астана, Акмолинская обл.</option>
-                      <option>Алматы</option>
-                      <option>Тараз, Жамбылськая обл.</option>
-                      <option>Шымкент</option>
-                      <option>Актобе, Актюбинская обл.</option>
+                    <select id="city" class="form-control">
+                      <option value="Астана">Астана, Акмолинская обл.</option>
+                      <option value="Алматы">Алматы</option>
+                      <option value="Тараз">Тараз, Жамбылськая обл.</option>
+                      <option value="Шымкент">Шымкент</option>
+                      <option value="Актобе">Актобе, Актюбинская обл.</option>
                     </select>
                   </div>
                   
                 </div>
-                <button class="col-md-2 btn2" type="submit">Отправить</button>
+                <button class="btn" type="submit" onclick="whatsapp();">Отправить</button>
               </form>
             </div>
         </div>
