@@ -3,19 +3,17 @@
 
 <head>
   <meta charset="UTF-8">
-
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+  <title>Утилизация медицинских отходов</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
     integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
     integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
-
   <link rel="icon" type="image/x-icon" href="public/image/eco-rbkk.png">
   <link rel="stylesheet" href="public/css/style.css">
-  <title>Утилизация медицинских отходов</title>
+
 </head>
 
 <body>
@@ -147,34 +145,33 @@
         style="width:auto;color: azure;font-family: mont serrat;">Оставить заявку</button>
 
       <div id="id01" class="modal">
+        <form id="myForm" class="modal-content animate center container-fluid"
+          action="https://sheetdb.io/api/v1/ds6ldp8iz6i1p" method="post">
 
-        <form class="modal-content animate center container-fluid">
           <div class="modal-header container-fluid border-0">
             <span onclick="closeModal('id01')" class="close">&times;
             </span>
           </div>
-          <div class="form-group col-md-12">
+          <div class="form-group col-md-10 col-sm-10">
             <label for="inputEmail4">ФИО<span style="color: red;">*</span></label>
-            <input type="text" class="form-control" id="name" value="" placeholder="" required>
+            <input type="text" class="form-control" name="name" value="" required>
           </div>
-
-
-          <div class="form-group col-md-12">
+          <div class="form-group col-sm-10 col-md-10 ">
             <label for="inputAddress">Email<span style="color: red;">*</span></label>
-            <input type="email" class="form-control" id="email" value="" placeholder="" required>
+            <input type="email" class="form-control" name="email" value="" required>
           </div>
-          <div class="form-group col-md-12">
+          <div class="form-group col-sm-10 col-md-10 ">
             <label for="inputAddress2">Телефон<span style="color: red;">*</span></label>
-            <input type="text" class="form-control" id="phone" value="" placeholder="" required>
+            <input type="text" class="form-control" name="phone" value="" required>
           </div>
           <div class="form-row">
-            <div class="form-group col-md-6">
+            <div class="form-group col-sm-10 col-md-6 ">
               <label for="inputCity">Текст сообщения</label>
-              <textarea class="form-control" id="text" value=""></textarea>
+              <textarea name="text" class="form-control" value=""></textarea>
             </div>
-            <div class="form-group col-md-6">
+            <div class="form-group col-sm-10 col-md-6 ">
               <label for="inputState">Город</label>
-              <select id="city" class="form-control">
+              <select name="city" class="form-control">
                 <option value="Астана">Астана, Акмолинская обл.</option>
                 <option value="Алматы">Алматы</option>
                 <option value="Тараз">Тараз, Жамбылськая обл.</option>
@@ -184,7 +181,7 @@
             </div>
 
           </div>
-          <button class="btn" type="submit" onclick="whatsapp();">Отправить</button>
+          <button class="btn" type="submit" style="color: #fefefe;" onclick="closeModal('id01')">Отправить</button>
         </form>
       </div>
     </div>
@@ -239,6 +236,20 @@
       <a class="text-dark" href="#">ТОО "ЭКО-РБК"</a>
     </div>
   </footer>
+  <script>
+    var form = document.getElementById('myForm');
+        form.addEventListener("submit", e => {
+          e.preventDefault();
+          fetch(form.action, {
+              method : "POST",
+              body: new FormData(document.getElementById("myForm")),
+          }).then( 
+            // you can put any JS code here
+            alert("Заявка отправлена"),
+            form.reset()
+          );
+        });
+  </script>
   <script src="myscript.js" charset="utf-8"></script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
     integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
