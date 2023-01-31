@@ -89,14 +89,14 @@
 
         <br>
         <br>
-        <button id="zayavka" class="btn" onclick="document.getElementById('id01').style.display='block'"
+        <button  class="btn" onclick="document.getElementById('id01').style.display='block'"
           style="width:auto;color: azure;font-family: montserrat;font-size: 18px;">Оставить заявку</button>
 
         <div id="id01" class="modal">
 
 
           <form id="myForm" class="modal-content animate center container-fluid"
-            action="https://sheetdb.io/api/v1/ds6ldp8iz6i1p" method="post">
+            action="https://sheetdb.io/api/v1/ds6ldp8iz6i1p" method="post" target="_blank">
 
             <div class="modal-header container-fluid border-0">
               <span onclick="closeModal('id01')" class="close">&times;
@@ -133,7 +133,7 @@
               </div>
 
             </div>
-            <button class="btn" type="submit" style="color: #fefefe;" onclick="closeModal('id01')">Отправить</button>
+            <button id="zayavka" class="btn" type="submit" style="color: #fefefe;">Отправить</button>
           </form>
         </div>
       </div>
@@ -279,7 +279,7 @@
 
       <div id="id01" class="modal">
         <form id="myForm" class="modal-content animate center container-fluid"
-          action="https://sheetdb.io/api/v1/ds6ldp8iz6i1p" method="post">
+          action="https://sheetdb.io/api/v1/ds6ldp8iz6i1p" method="post" target="_blank">
 
           <div class="modal-header container-fluid border-0">
             <span onclick="closeModal('id01')" class="close">&times;
@@ -287,26 +287,26 @@
           </div>
           <div class="form-group col-md-10 col-sm-10">
             <label for="inputEmail4">ФИО<span style="color: red;">*</span></label>
-            <input type="text" class="form-control" name="name" value="" required>
+            <input type="text" class="form-control" name="data[name]" value="" required>
           </div>
 
 
           <div class="form-group col-sm-10 col-md-10 ">
             <label for="inputAddress">Email<span style="color: red;">*</span></label>
-            <input type="email" class="form-control" name="email" value="" required>
+            <input type="email" class="form-control" name="data[email]" value="" required>
           </div>
           <div class="form-group col-sm-10 col-md-10 ">
             <label for="inputAddress2">Телефон<span style="color: red;">*</span></label>
-            <input type="text" class="form-control" name="phone" value="" required>
+            <input type="text" class="form-control" name="data[phone]" value="" required>
           </div>
           <div class="form-row">
             <div class="form-group col-sm-10 col-md-6 ">
               <label for="inputCity">Текст сообщения</label>
-              <textarea name="text" class="form-control" value=""></textarea>
+              <textarea name="data[text]" class="form-control" value=""></textarea>
             </div>
             <div class="form-group col-sm-10 col-md-6 ">
               <label for="inputState">Город</label>
-              <select name="city" class="form-control">
+              <select name="data[city]" class="form-control">
                 <option value="Астана">Астана, Акмолинская обл.</option>
                 <option value="Алматы">Алматы</option>
                 <option value="Тараз">Тараз, Жамбылськая обл.</option>
@@ -316,7 +316,7 @@
             </div>
 
           </div>
-          <button class="btn" type="submit" style="color: #fefefe;" onclick="closeModal('id01')">Отправить</button>
+          <button class="btn" type="submit" id="zayavka" style="color: #fefefe;" >Отправить</button>
         </form>
 
       </div>
@@ -373,18 +373,7 @@
     </div>
   </footer>
   <script>
-    var form = document.getElementById('myForm');
-        form.addEventListener("submit", e => {
-          e.preventDefault();
-          fetch(form.action, {
-              method : "POST",
-              body: new FormData(document.getElementById("myForm")),
-          }).then( 
-            // you can put any JS code here
-            alert("Заявка отправлена"),
-            form.reset()
-          );
-        });
+   
   </script>
   <script>
     $(function () {
