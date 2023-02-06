@@ -1,3 +1,26 @@
+const form = document.querySelector("#myForm")
+   const submitButton = document.querySelector("#zayavka")
+   const scriptURL = 'https://sheetdb.io/api/v1/ds6ldp8iz6i1p'
+
+   form.addEventListener('submit', e => {
+     submitButton.disabled = true
+     e.preventDefault()
+     let requestBody = new FormData(form)
+     fetch(scriptURL, { method: 'POST', body: requestBody})
+       .then(response => {
+          window.location.href='success.html'
+          submitButton.disabled = false
+         })
+       .catch(error => {
+       alert('Error!', error.message)
+         submitButton.disabled = false
+
+       }
+       )
+   })
+
+
+   
 var modal1 = document.getElementById('id01');
 var modal5 = document.getElementById('id02');
 // When the user clicks anywhere outside of the modal3, close it
@@ -75,26 +98,3 @@ function closeModal(id) {
   $('#' + id).fadeOut('medium');
 }
 
-const form = document.querySelector("#myForm")
-   const submitButton = document.querySelector("#zayavka")
-   const scriptURL = 'https://sheetdb.io/api/v1/ds6ldp8iz6i1p'
-
-   form.addEventListener('submit', e => {
-     submitButton.disabled = true
-     e.preventDefault()
-     let requestBody = new FormData(form)
-     fetch(scriptURL, { method: 'POST', body: requestBody})
-       .then(response => {
-          window.location.href='success.html'
-          submitButton.disabled = false
-         })
-       .catch(error => {
-       alert('Error!', error.message)
-         submitButton.disabled = false
-
-       }
-       )
-   })
-
-
-   
