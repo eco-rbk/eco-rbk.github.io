@@ -240,6 +240,7 @@ function gotowhatsapp() {
     + "Текст сообщения: " + text; 
 
     window.open(url, '_blank').focus();
+    $('#myForm')[0].reset();
     closeModal("id02")
 }
     const form = document.querySelector("#form")
