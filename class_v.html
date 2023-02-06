@@ -118,7 +118,8 @@
 
       <div id="id01" class="modal">
 
-        <form id="myForm" target="_blank" class="modal-content animate center container-fluid" action="https://sheetdb.io/api/v1/ds6ldp8iz6i1p" method="post">
+        <form id="myForm" target="_blank" class="modal-content animate center container-fluid"
+          action="https://sheetdb.io/api/v1/ds6ldp8iz6i1p" method="post">
 
           <div class="modal-header container-fluid border-0">
             <span onclick="closeModal('id01')" class="close">&times;
@@ -126,26 +127,26 @@
           </div>
           <div class="form-group col-md-10 col-sm-10">
             <label for="inputEmail4">ФИО<span style="color: red;">*</span></label>
-            <input type="text" class="form-control" name ="name" value="" required>
+            <input type="text" class="form-control" name="name" value="" required>
           </div>
 
 
           <div class="form-group col-sm-10 col-md-10 ">
             <label for="inputAddress">Email<span style="color: red;">*</span></label>
-            <input type="email" class="form-control" name ="email" value="" required>
+            <input type="email" class="form-control" name="email" value="" required>
           </div>
           <div class="form-group col-sm-10 col-md-10 ">
             <label for="inputAddress2">Телефон<span style="color: red;">*</span></label>
-            <input type="text" class="form-control" name ="phone" value="" required>
+            <input type="text" class="form-control" name="phone" value="" required>
           </div>
           <div class="form-row">
             <div class="form-group col-sm-10 col-md-6 ">
               <label for="inputCity">Текст сообщения</label>
-              <textarea name ="text" class="form-control" value=""></textarea>
+              <textarea name="text" class="form-control" value=""></textarea>
             </div>
             <div class="form-group col-sm-10 col-md-6 ">
               <label for="inputState">Город</label>
-              <select name ="city" class="form-control">
+              <select name="city" class="form-control">
                 <option value="Астана">Астана, Акмолинская обл.</option>
                 <option value="Алматы">Алматы</option>
                 <option value="Тараз">Тараз, Жамбылськая обл.</option>
@@ -155,7 +156,7 @@
             </div>
 
           </div>
-          <button class="btn" type="submit" id="zayavka" style="color: #fefefe;" >Отправить</button>
+          <button class="btn" type="submit" id="zayavka" style="color: #fefefe;">Отправить</button>
         </form>
 
       </div>
@@ -211,27 +212,31 @@
       <a class="text-dark" href="#">ТОО "ЭКО-РБК"</a>
     </div>
   </footer>
- <script>
-  const form = document.querySelector("#myForm")
-     const submitButton = document.querySelector("#zayavka")
-     const scriptURL = 'https://sheetdb.io/api/v1/ds6ldp8iz6i1p'
-  
-     form.addEventListener('submit', e => {
-       submitButton.disabled = true
-       e.preventDefault()
-       let requestBody = new FormData(form)
-       fetch(scriptURL, { method: 'POST', body: requestBody})
-         .then(response => {
-            window.location.href='success.html'
-            submitButton.disabled = false
-           })
-         .catch(error => {
-         alert('Error!', error.message)
-           submitButton.disabled = false
-  
-         }
-         )
-     })</script>
+  <script>
+    const form = document.querySelector("#myForm")
+    const submitButton = document.querySelector("#zayavka")
+    const scriptURL = 'https://sheetdb.io/api/v1/ds6ldp8iz6i1p'
+
+    form.addEventListener('submit', e => {
+      submitButton.disabled = true
+      e.preventDefault()
+      let requestBody = new FormData(form)
+      fetch(scriptURL, { method: 'POST', body: requestBody })
+        .then(response => {
+          window.location.href = 'success.html'
+          submitButton.disabled = false
+        })
+        .catch(error => {
+          alert('Error!', error.message)
+          submitButton.disabled = false
+
+        }
+        )
+    })
+    function closeModal(id) {
+      $('#' + id).fadeOut('medium');
+    }
+  </script>
   <script src="myscript.js" charset="utf-8"></script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
     integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
@@ -240,4 +245,5 @@
     integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
     crossorigin="anonymous"></script>
 </body>
+
 </html>

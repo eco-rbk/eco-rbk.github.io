@@ -216,25 +216,29 @@
   </footer>
   <script>
     const form = document.querySelector("#myForm")
-       const submitButton = document.querySelector("#zayavka")
-       const scriptURL = 'https://sheetdb.io/api/v1/ds6ldp8iz6i1p'
-    
-       form.addEventListener('submit', e => {
-         submitButton.disabled = true
-         e.preventDefault()
-         let requestBody = new FormData(form)
-         fetch(scriptURL, { method: 'POST', body: requestBody})
-           .then(response => {
-              window.location.href='success.html'
-              submitButton.disabled = false
-             })
-           .catch(error => {
-           alert('Error!', error.message)
-             submitButton.disabled = false
-    
-           }
-           )
-       })</script>
+    const submitButton = document.querySelector("#zayavka")
+    const scriptURL = 'https://sheetdb.io/api/v1/ds6ldp8iz6i1p'
+
+    form.addEventListener('submit', e => {
+      submitButton.disabled = true
+      e.preventDefault()
+      let requestBody = new FormData(form)
+      fetch(scriptURL, { method: 'POST', body: requestBody })
+        .then(response => {
+          window.location.href = 'success.html'
+          submitButton.disabled = false
+        })
+        .catch(error => {
+          alert('Error!', error.message)
+          submitButton.disabled = false
+
+        }
+        )
+    })
+    function closeModal(id) {
+      $('#' + id).fadeOut('medium');
+    }
+  </script>
   <script src="myscript.js" charset="utf-8"></script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
     integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
