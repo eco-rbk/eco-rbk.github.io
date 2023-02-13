@@ -82,7 +82,7 @@
             href="ценовка Шымкент.pdf" download="Ценовка Шымкент"
             style="text-decoration:none; color:black;font-family:montserrat;">Шымкент</a> <br><a
             href="Ценовка Тараз.pdf" download="Ценовка Тараз"
-            style="text-decoration:none; color:black;font-family:montserrat;">Тараз</a><br> <a href="Ценовка Актобе.pdf"
+            style="text-decoration:none; color:black;font-family:montserrat;">Тараз</a><br> <a href="Актобе.pdf"
             download="Ценовка Актобе" style="text-decoration:none; color:black;font-family:montserrat;">Актобе</a>
         </p>
 
@@ -237,7 +237,8 @@ function gotowhatsapp() {
     + "ФИО: " + name + "%0a"
     + "Номер: " + phone + "%0a"
     + "Email: " + email  + "%0a"
-    + "Текст сообщения: " + text; 
+    + "Текст сообщения: " + text + "%0a"
+    + "Город: " + city; 
 
     window.open(url, '_blank').focus();
     $('#myForm')[0].reset();
